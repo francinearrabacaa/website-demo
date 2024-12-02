@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Library Management System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #ffcbcb;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+    }
+    #header img {
+      width: 100%;
+      height: 300px;
+    }
+    #head {
+      text-align: center;
+      color: white;
+      font-size: 40px;
+      padding: 50px 20px;
+      margin: -250px 0px 0px 0px;
+    }
+    #searchm {
+      text-align: center;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      margin-left: 40%;
+    }
+    #info {
+      width: 30%;
+      padding: 10px;
+      background-color: #fcf8f3;
+      border: none;
+      border-radius: 5px;
+    }
+    #search {
+      width: 25px;
+      height: 30px;
+      background-color:transparent;
+      border: none;
+      margin: 0px 0px 0px -15px;
+    }
+    .sidebar{
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100vh;
+      background-color: #ffaaa5;
+      color: white;
+      padding: 20px;
+      transition: left 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sidebar.active {
+      left: 0;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .menu ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .sidebar ul li {
+      padding: 10px 0;
+      font-size: 18px;
+    }
+
+    .sidebar ul li:hover {
+      color: #ffc1c8;
+      cursor: pointer;
+    }
+    .menu ul li:hover {
+      color: #ffb5b5;
+      cursor: pointer;
+    }
+    button {
+      padding: 10px 40px;
+      background-color: #ffaaa5;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin: 20px;
+      border-radius: 50px; 
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .menu li{
+      text-decoration: none;
+      list-style-type: none;
+    }
+  
+    .menu ul li{
+      display: inline-block;
+      padding: 10px 0;
+      justify-content: space-between;
+      width: 150px;
+      font-size: 20px;
+      font-family: Lucida Console;
+      color: white;
+      font-weight: bold;
+    }
+    .menu a{
+      color: white;
+      text-decoration: none;
+    }
+    .sidebar a{
+      text-decoration: none;
+      list-style-type: none;
+    }
+    .menu{
+     margin: 18px 0px 20px 0px;
+    }
+    button:hover {
+      background-color: #ffc1c8;
+    }
+    @media screen and (max-width: 768px) {
+      #info {
+        width: 80%;
+      }
+      #head {
+        font-size: 30px;
+        padding: 20px 10px;
+      }
+      .sidebar {
+        width: 200px;
+      }
+      #s-show{
+        color: white;
+      }
+      .Slides img {
+        transition: opacity 0.5s ease-in-out;
+      }
+      .slide {
+        width: 900px;
+        height: 900px;
+        background-color: #ec729c;
+        text-align: center;
+        display: flex;
+        justify-content: center;   
+        align-items: center;       
+        margin: 0 auto; 
+      }
+      .fa-facebook{
+        color: #f5eee6;
+      }
+      .fa-twitter{
+        color: #f5eee6;
+      }
+      .fa-dribbble{
+        color: #f5eee6;
+      }
+      .fa-linkedin{
+        color: #f5eee6;
+      }
+      .icons {
+        list-style-type: none;
+        padding: 0;
+        display: inline-flex;
+        justify-content: center;
+        margin-top: 20px; 
+        font-size: 30px;
+        color: #f5eee6;
+        text-decoration: none;
+      }
+      .icons ul li{
+        display: flex;
+        padding: 10px 0;
+        justify-content: space-between;
+        display: inline-block;
+      }
+
+      .icons li {
+        margin: 0 15px;
+      }
+      li{
+        text-decoration: none;
+        list-style-type: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="header">
+    <img src="header.jpg.jpg" alt="Library Image">
+  </div>
+  <div id="head">
+    <h1 style="font-family: serif;">Library Management System</h1>
+    <form id="searchm" action="">
+      <input type="text" placeholder="Search.." id="info">
+      <button type="submit" id="search"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+  <div id="sb" class="sidebar">
+    <ul>
+      <li><a href="genre.html" style="color: white; text-decoration:none;">Genre</a></li>
+      <li><a href="poetry.html" style="color: white; text-decoration:none;">Poetry</a></li>
+      <li>Author</li>
+      <li>Popular</li>
+      <li>Audiobook</li>
+      
+    </ul>
+  </div>
+  <center>
+  <div class="menu">
+    <ul>
+      <li><a href="capstone1128up.html">Home</li>
+      <li><a href="Aboutus.html">About Us</a></li>
+      <li><a href="youraccount.html">Your Account</a></li>
+ <br>
+ <br>
+ <br>
+  <ul class="icons" style="color: #f5eee6 ;">
+    <li><a class="fa fa-facebook"></a></li>
+    <li><a class="fa fa-twitter"></a></li>
+    <li><a class="fa fa-dribbble"></a></li>
+    <li><a class="fa fa-linkedin"></a></li>
+    <li><a class="fa fa-vimeo"></a></li>
+  </ul>
+  </center>
+    </ul>
+  </div>
+</center>
+
+  <button id="sb-btn">More of us</button> 
+  
+
+  <script>
+    const sidebar = document.getElementById('sb');
+    const toggleButton = document.getElementById('sb-btn');
+    toggleButton.addEventListener('click', function() {
+      sidebar.classList.toggle('active'); 
+    });
+  </script>
+
+</body>
+</html>
